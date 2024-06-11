@@ -1,7 +1,9 @@
+
+from lista_opciones import *
+
 #@sumar: función que requiere de dos parametros
 #@return: retorna el resultado de la operación
 # nm1 + num2
-
 
 def sumar(num1, num2):
     return num1 + num2
@@ -34,9 +36,10 @@ print(resultado)
 # --------------------
 
 def programa_calculadora():
-    print("[1] ------------------------------")
-    print(f"[1] Sumar           [2] Restar")
-    print(f"[3] Multiplicar     [4] Dividir\n")
+
+    opciones_calculadora = ["Multiplicar", "Divir", "Sumar", "Restar"]
+
+    cargar_opciones(opciones_calculadora)
 
     opcion = input("[?]: ")
     
@@ -52,7 +55,7 @@ def programa_calculadora():
     elif opcion == '4':
         print("[Res /]: ", dividir(num1,num2))
     
-    print("----------------------------------")
+    imprimirLinea()
 
 
 

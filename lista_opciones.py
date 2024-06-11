@@ -1,24 +1,10 @@
-# lista de opciones
-lista_de_opciones = [
-    "Calculadora",
-    "Opción 2",
-    "Opción 3",
-    "Opción 4",
-    "Opción 5",
-    "Opción 6",
-    "Opción 7",
-    "Opción 8",
-    "Opción 9",
-    "Salir"
-]
-
 # Función
-def cargar_opciones():
-    print("-"*30)
+def cargar_opciones(lista):
+    imprimirLinea()
 
-    for opcion in lista_de_opciones: 
+    for opcion in lista: 
 
-        indice = lista_de_opciones.index(opcion)+1
+        indice = lista.index(opcion)+1
 
         if indice%2 == 0:
             print(f"[{indice}]{opcion}")
@@ -26,5 +12,7 @@ def cargar_opciones():
             mensaje = f"[{indice}]{opcion} "
             print(mensaje," "*(15-len(mensaje)),end="")
 
-    print("\n","-"*29)
+
+def imprimirLinea():
+    print("-"*30)
 
